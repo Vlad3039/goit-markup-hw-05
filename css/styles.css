@@ -163,7 +163,7 @@ img {
 
 .header-logo-second {
   margin: 0 auto;
-  color: var(--title-color);
+  color:var(--title-color);
 }
 .nav-list {
   display: flex;
@@ -180,13 +180,26 @@ img {
   font-weight: 500;
   line-height: var(--tipical-line-height);
   letter-spacing: 0.02em;
-  color: var(--title-color);
+ color: #2E2F42;
+  position: relative;
 }
 
 .header-link:hover,
-.header-link:focus {
+.header-link:focus,header-link.corrent {
   color: var(--second-main-color);
 }
+
+.header-link::after{
+  content: ;
+position: absolute;
+width: 48px;
+height: 4px;
+left: 0px;
+top: 44px;
+background: #404BBF;
+border-radius: 2px;
+}
+
 .address {
   display: flex;
   margin-left: auto;
@@ -216,6 +229,8 @@ img {
 .address-link:focus {
   color: var(--second-main-color);
 }
+
+
 
 /**---------------FOOTER---------------*/
 
