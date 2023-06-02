@@ -175,8 +175,6 @@ img {
 .header-link {
   display: flex;
   padding-top: 24px;
-  padding-bottom: 24px;
-
   font-weight: 500;
   line-height: var(--tipical-line-height);
   letter-spacing: 0.02em;
@@ -185,12 +183,12 @@ img {
 }
 
 .header-link:hover,
-.header-link:focus,header-link.corrent {
+.header-link:focus.header-link.corrent {
   color: var(--second-main-color);
 }
 
 .header-link::after{
-  content: ;
+  content: "";
 position: absolute;
 width: 48px;
 height: 4px;
@@ -198,6 +196,7 @@ left: 0px;
 top: 44px;
 background: #404BBF;
 border-radius: 2px;
+bottom: -20 ;
 }
 
 .address {
@@ -550,6 +549,28 @@ background-color: #404bbf;
   line-height: var(--tipical-line-height);
   letter-spacing: 0.02em;
   color: #434455;
+}
+
+.gallery-box{
+  position: relative;
+}
+
+.paragraf-gallery{
+position: absolute;
+width: 300px;
+left: 32px;
+height: 360px;
+top:0 ;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #F4F4FD;
+background-color: #4D5AE5;
+padding-top: 40px ;
+height: 100%;
 }
 
 /**----------------index html Customers--------------**/
