@@ -524,6 +524,10 @@ background-color: #404bbf;
   display: block;
 }
 
+.gallery-item:hover .paragraf-gallery{
+  transform: translateY(0%);
+}
+
 .gallery-link:hover,
  .gallery-link:focus
 {box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -557,10 +561,7 @@ background-color: #404bbf;
 
 .paragraf-gallery{
 position: absolute;
-width: 300px;
-left: 32px;
-height: 360px;
-top:0 ;
+top:96px ;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
@@ -571,6 +572,8 @@ color: #F4F4FD;
 background-color: #4D5AE5;
 padding-top: 40px ;
 height: 100%;
+transform: translateY(100%);
+translate: transform 300ms linear;
 }
 
 /**----------------index html Customers--------------**/
