@@ -551,7 +551,7 @@ background-color: #404bbf;
 
 .gallery-item:hover .paragraf-gallery,
 .gallery-item:focus .paragraf-gallery{
-  transform: translateY(0);
+  transform: translate(0, 0);
 }
 
 .gallery-link:hover,
