@@ -139,6 +139,7 @@ img {
 .header-container {
   display: flex;
   align-items: center;
+
 }
 .header-navigation {
   display: flex;
@@ -170,33 +171,45 @@ img {
   align-items: center;
 }
 .nav-item:not(:last-child) {
-  margin-right: 40px;
+margin-right: 40px;
 }
 .header-link {
-  display: flex;
-  padding-top: 24px;
+  display: block;
+  position: relative;
+  padding: 24px 0;
   font-weight: 500;
   line-height: var(--tipical-line-height);
   letter-spacing: 0.02em;
  color: #2E2F42;
-  position: relative;
+
 }
 
 .header-link:hover,
-.header-link:focus.header-link.corrent {
+.header-link:focus {
   color: var(--second-main-color);
 }
 
-.header-link::after{
+.header-link.current::after {
   content: "";
-position: absolute;
-width: 48px;
-height: 4px;
-left: 0px;
-top: 44px;
-background: #404BBF;
-border-radius: 2px;
-bottom: -20 ;
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform var(--transition);
+  width: 100%;
+  height: 4px;
+  bottom: -1px;
+  background-color: var(--second-main-color);
+  border-radius: 2px;
+}
+
+.header-link.current {
+  color: var(--second-main-color);
+}
+
+.header-link:hover:after,
+.header-link:focus:after,
+.header-link.current:after {
+  transform: scaleX(1);
 }
 
 .address {
@@ -557,24 +570,66 @@ background-color: #404bbf;
 
 .gallery-box{
   position: relative;
+  overflow: hidden ;
 }
+
 
 .paragraf-gallery{
 position: absolute;
-top:96px ;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
+width: 100%;
+left: 8;
+top:0 ;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #F4F4FD;
 background-color: #4D5AE5;
-padding-top: 40px ;
+padding: 40px 32px ;
 height: 100%;
 transform: translateY(100%);
-translate: transform 300ms linear;
+transition:  transform 300ms linear;;
+} 
+
+.gallery-img-wrapper {
+  position: relative;
+  overflow: hidden;
 }
+
+.galeri-div{
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-galeri{
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-galeri-div{
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-warning{
+  position: relative;
+  overflow: hidden;
+}
+
+.warning-gallery{
+  position: relative;
+  overflow: hidden;
+}
+
+.warning-gallery-war{
+  position: relative;
+  overflow: hidden;
+}
+
+.coffe{
+  position: relative;
+  overflow: hidden;
+}
+
 
 /**----------------index html Customers--------------**/
 
@@ -631,5 +686,69 @@ border-color:#404BBF
 ;
 color: #404BBF
 ;
+}
+
+/**----------------backdrop--------------**/
+
+.backdrop{
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  transition: visibility var(--transition), opacity var(--transition);
+}
+
+.modal{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform var(--transition);
+  width: 408px;
+  min-height: 584px;
+  border-radius: 4px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-btn-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color var(--transition);
+  transition: background-color var(--transition), border var(--transition);
+}
+
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  color: #ffffff;
+  background-color: var(--second-main-color);
+  border: none;
+}
+
+.modal-close-btn-icon {
+  fill: currentColor;
+  transition: fill var(--transition);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
