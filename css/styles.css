@@ -549,10 +549,12 @@ background-color: #404bbf;
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery-item:hover .paragraf-gallery,
-.gallery-item:focus .paragraf-gallery {
+.gallery-link:hover .paragraf-gallery,
+.gallery-link:focus .paragraf-gallery {
 transform: translateY(0%);
 }
+
+
 
 .gallery-link:hover,
  .gallery-link:focus
